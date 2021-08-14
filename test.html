@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">Racine14</a>
+        <ul>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Message</a></li>
+            <li><a href="#">Profil</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="sidebar">
+            <h1>sidebar</h1>
+        </div>
+        <div class="containerbar">
+            <h1>center or main</h1>
+            <div id="messages"></div>
+        </div>
+        <div class="rightbar">
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quibusdam, repellat inventore dolore
+                quidem commodi? Minus soluta et, facilis harum cupiditate beatae cumque excepturi illum quam unde maxime
+                delectus dolores!</h3>
+        </div>
+    </section>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        var url = "http://localhost/chat/backend/config.config.php"
+        $(document).ready(function () {
+            Fetch()
+            console.log("Data fetch fail")
+        })
+        function Fetch() {
+            $.get(`${url}?action=All`, function (data) {
+                if (data.items) {
+                    data.items.forEach(item => {
+                        console.log(data.items + "Data")
+                        $('#messages').append(renderMessage(item))
+                    });
+                }
+            })
+        }
+        function renderMessage(element) {
+            return `
+            <div>
+                <p>
+                    ${element.message}
+                </p>
+            </div>
+            `
+        }
+    </script>
+</body>
+
+</html>
