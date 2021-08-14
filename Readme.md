@@ -1,12 +1,13 @@
 # welcome to chatApp 
-## this app should work in every browsers. 
+## This app **should** work in every *browsers*. 
 ### We use html, css, bootstrap, and javascript to make this awesome app
 ---
 [HTML]("www.w3schools.com/html", "Visite the link")
 [CSS]("www.w3schools.com/html", "Visite the link")
 [BOOTSTRAP]("www.w3schools.com/html", "Visite the link")
 [JAVASCRIPT/JQUERY]("www.w3schools.com/html", "Visite the link")
-# Database ./backend/table.config.sql
+## Database ./backend/table.config.sql
+### You can copy the following code to your sql __database__
 ```sql
 CREATE TABLE `crudajax`.`chat` ( 
     `id` INT NOT NULL AUTO_INCREMENT , 
