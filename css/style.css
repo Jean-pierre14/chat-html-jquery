@@ -10,11 +10,20 @@ body{
 }
 
 .container{
+    position: relative;
     width: 320px;
     padding: 10px;
     margin: 10px auto;
     background-color: blanchedalmond;
 }
 #title{
+    text-align: center;
     color: white;
+}
+
+img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    align-items: center;
 }
