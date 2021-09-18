@@ -43,3 +43,23 @@ img{
     padding: 10px;
     background: #fff;
 }
+
+.group{
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+.group label{
+    color: #111;
+    margin: 5px 0;
+    font-family: calibri !important;
+    font-weight: 600;
+}
+.input{
+    display: block;
+    width: 100%;
+    outline: none !important;
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    padding: 10px;
+}
