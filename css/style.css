@@ -63,3 +63,15 @@ img{
     border-radius: 4px;
     padding: 10px;
 }
+
+.group .button{
+    position: relative;
+    padding: 12px;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.close{
+    float: right;
+}
