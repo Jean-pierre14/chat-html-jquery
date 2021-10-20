@@ -86,6 +86,7 @@ img{
     /* background: red; */
 
     line-height: 50px;
+    display: none;
 }
 .hand button{
     /* background: none !important; */
@@ -100,6 +101,9 @@ img{
     background: rgba(218, 110, 110, 0.5)
 }
 @media(max-width: 600px){
+    .hand{
+        display: block;
+    }
     .navbar{
         position: fixed;
         top: 0;

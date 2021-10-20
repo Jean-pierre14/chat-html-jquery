@@ -3,60 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="shortcut icon" href="./images/sniper2.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style00.css">
+    <title>Chat App</title>
 </head>
 
 <body>
-    <div id="messages"></div>
-    <form action="">
-        <input type="text" id="message" autocomplete="off" autofocus placeholder="Type message...">
-        <input type="submit" value="Send">
-    </form>
-    <script src="./js/jquery.min.js"></script>
-    <script>
-        var from = null, start = 0, url = 'http://localhost/chat/backend/config.php'
-        $(document).ready(function () {
-            from = prompt("Please entre your name")
-            load()
-            $('form').submit(function (e) {
-                e.preventDefault();
-                $.post(url, {
-                    message: $('#message').val().trim(),
-                    from: from
-                })
-                load()
-                $('#message').val('')
-                return false;
-            })
-        })
-
-        function load() {
-            $.get(url, + '?start' + start, function (result) {
-                if (result.items) {
-                    result.items.forEach(item => {
-                        start = item.id;
-                        $('#messages').append(renderMessage(item))
-                    })
-                    $('#messages').animate({ scrollTop: $('#messages')[0].scrollHeight })
-                }
-            })
-        }
-
-        function renderMessage(item) {
-            let time = new Date(item.created)
-            time = `${time.getHours() < 10 ? '0' : ''}${time.getHours()}:${time.getMinutes() < 10 ? '0' : ''}${time.getMinutes()}`
-            return `
-                <div class="msg">
-                    <p>${item.from}</p>
-                    ${item.message}
-                    <span>${time}</span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-12 mt-2">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" placeholder="Username" id="username"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail*</label>
+                                <input type="email" placeholder="Email@congo.cd" name="email" id="email"
+                                    class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="password">Password *</label>
+                                    <input type="password" name="password" placeholder="Password*" id="password"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="password2">Confirm Password *</label>
+                                    <input type="password" name="password2" placeholder="Password*" id="password2"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                `
-        }
-    </script>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
