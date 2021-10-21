@@ -7,7 +7,7 @@
 [BOOTSTRAP]("www.w3schools.com/html", "Visite the link")
 [JAVASCRIPT/JQUERY]("www.w3schools.com/html", "Visite the link")
 ## Database ./backend/table.config.sql
-### You can copy the following code to your sql __database__
+## You can copy the following code to your sql __database__
 ```sql
 CREATE TABLE `crudajax`.`chat` ( 
     `id` INT NOT NULL AUTO_INCREMENT , 
@@ -17,5 +17,5 @@ CREATE TABLE `crudajax`.`chat` (
 )) ENGINE = InnoDB;
 ```
 
-### You have to import into your SQL databases. the file is already created for you
-### And open your index.html into any browser
+## You have to import into your SQL databases. the file is already created for you
+# And open your index.html into any browser
