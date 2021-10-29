@@ -1,4 +1,4 @@
 <?php
-    include_once "./config.php";
-    print "Data";
+    // include_once "./config.php";
+    echo "Data";
 ?>
