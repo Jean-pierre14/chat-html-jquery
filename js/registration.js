@@ -5,6 +5,10 @@ form.onsubmit = (e) => {
     e.preventDefault()
 }
 
+submitBtn.addEventListener('click', function () {
+    alert("Cool")
+})
+
 submitBtn.onclick = () => {
     // Ajax
     let xhr = new XMLHttpRequest();
