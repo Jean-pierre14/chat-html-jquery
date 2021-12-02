@@ -10,7 +10,7 @@ form.onsubmit = (e)=>{
 }
 
 continueBtn.onclick = ()=>{
-    console.log("Hello"); // The test
+    // console.log("Hello"); // The test
     // let's start Ajax
     let xhr = new XMLHttpRequest(); // Creating XML object
     xhr.open("POST", "backend/signup.php", true);
