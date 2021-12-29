@@ -1,3 +1,3 @@
 msgid "Hello"
-msgstr "Bonjour"
+msgstr "Salut"
 
