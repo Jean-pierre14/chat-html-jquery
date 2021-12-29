@@ -10,8 +10,8 @@
         // To check email
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             // To check the email is already exist
-            $sql = mysqli_query($con, "SELECT email FROM users WHERE email = '{$email}'");
-            if(mysqli_num_rows($sql) > 0){
+            $sql = mysqli_query($con, "SELECT email FROM users WHERE email = '$email'");
+            if(@mysqli_num_rows($sql) > 0){
                 echo "$email - This email is already taken";
             }else{
                 if(isset($_FILES['file'])){ // if file is uploaded
@@ -22,7 +22,7 @@
                     // let's expode image and get the last extension like jpg png
                     $img_explode = explode('.', $img_name); 
                     $img_ext = end($img_explode); // // Here we get the extension of an img
-                    $extension = ['png', 'jpeg', 'jpg'];
+                    $extension = ['png', 'jpeg', 'jpg', 'JPG'];
                     if(in_array($img_ext, $extension) === true){
                         $time = time(); // This will return the current time.
                         $new_img_name = $time.$img_name;
