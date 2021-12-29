@@ -1,5 +1,4 @@
 <?php
-    print "success";
     include_once("./conn.php");
 
     $user = mysqli_real_escape_string($con, htmlentities(trim($_POST['username'])));
@@ -10,7 +9,11 @@
     
 
     if(!empty($user) && !empty($email) && !empty($password) && !empty($cpassword)){
-        $pass = md5($password);
+        if($password != $cpassword){
+            echo "Passwords are not match";
+        }else{
+            // We continou
+            $pass = md5($password);
         $status = 'Active now';
         $random_id = rand(time(), 1000000);
 
@@ -29,11 +32,11 @@
                 $new_img_name = $time.$img_name;
 
                 if(move_uploaded_file($tmp_name, "../images/".$new_img_name)){
-                    $sqlRes = mysqli_query($con, "INSERT INTO users (unique_id, username, email, `password`, img, `status`) VALUES('{$random_id}', '{$username}', '{$email}', '{$pass}', '{$new_name}', '{$status}')");
+                    $sqlRes = mysqli_query($con, "INSERT INTO users (unique_id, username, email, `password`, img, `status`) VALUES('{$random_id}', '{$user}', '{$email}', '{$pass}', '{$new_img_name}', '{$status}')");
                     if($sqlRes){
-                        print "success";
+                        echo "success";
                     }else{
-                        print "Sql error";
+                        echo "Sql error";
                     }
                 }
 
@@ -43,6 +46,7 @@
 
         }else{
             print "Select an image please";
+        }
         }
         
     }else{

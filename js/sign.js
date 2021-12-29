@@ -15,13 +15,14 @@ continueBtn.onclick = ()=>{
     // let's start Ajax
     let xhr = new XMLHttpRequest(); // Creating XML object
     xhr.open("POST", "backend/signUp2.php", true);
-    xhr.onload = ()=>{
+    xhr.onload = () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
                 // console.log(data);
-                if(data === 'success'){
+                if(data == 'success'){
                     ErrorHtml.innerHTML = '<div class="alert alert-success">Success</div>';
+                    form.reset()
                 }else{
                     ErrorHtml.innerHTML = `<div class="alert alert-danger">${data}</div>`;
                 }
