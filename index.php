@@ -58,7 +58,7 @@
 
                 </div>
                 <div class="card card-body mt-2">
-                    <p class="text-center">I have an<a href="login.html" class="btn btn-link">account</a></p>
+                    <p class="text-center">I have an<a href="login" class="btn btn-link">account</a></p>
                 </div>
             </div>
         </div>
