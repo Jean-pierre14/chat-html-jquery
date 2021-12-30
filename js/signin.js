@@ -8,11 +8,14 @@ btnLogin.onclick = () =>{
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response
-                alert(data)
+                // alert(data)
                 if(data === "success"){
-                    error.innerHTML = "success"
+                    error.innerHTML = `<p class="alert alert-success">
+                        Login...
+                    </p>`
+                    location.href = "./users.php"
                 }else{
-                    error.innerHTML = `<div class="alert alert-danger">${data}</div>`
+                    error.innerHTML = `<p class="alert alert-danger">${data}</p>`
                 }
             }
         }
