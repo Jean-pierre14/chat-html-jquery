@@ -16,7 +16,10 @@
                             </span>
                         </a>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body px-0">
+                        <?php if(isset($_GET['message'])):?>
+                        <h3>Messages</h3>
+                        <?php else:?>
                         <div id="user-List">
                             <div class="list-group list-group-flush">
                                 <a href="users?message=<?= $row['unique_id'];?>"
@@ -61,8 +64,8 @@
                                     </small>
                                 </a>
                             </div>
-
                         </div>
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
