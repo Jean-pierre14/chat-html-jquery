@@ -16,6 +16,54 @@
                             </span>
                         </a>
                     </div>
+                    <div class="card-body">
+                        <div id="user-List">
+                            <div class="list-group list-group-flush">
+                                <a href="users?message=<?= $row['unique_id'];?>"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-item-center">
+                                    <span>
+                                        <img src="./images/<?= $row['img'];?>" alt="<?= $row['username'];?>"
+                                            class="img-avatar">
+                                    </span>
+                                    <span>
+                                        <?= $row['username'];?>
+                                    </span>
+                                    <small>
+                                        <?= $row['status'];?>
+                                    </small>
+                                </a>
+
+                                <a href="users?message=<?= $row['unique_id'];?>"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-item-center">
+                                    <span>
+                                        <img src="./images/<?= $row['img'];?>" alt="<?= $row['username'];?>"
+                                            class="img-avatar">
+                                    </span>
+                                    <span>
+                                        <?= $row['username'];?>
+                                    </span>
+                                    <small>
+                                        <?= $row['status'];?>
+                                    </small>
+                                </a>
+
+                                <a href="users?message=<?= $row['unique_id'];?>"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-item-center">
+                                    <span>
+                                        <img src="./images/<?= $row['img'];?>" alt="<?= $row['username'];?>"
+                                            class="img-avatar">
+                                    </span>
+                                    <span>
+                                        <?= $row['username'];?>
+                                    </span>
+                                    <small>
+                                        <?= $row['status'];?>
+                                    </small>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
