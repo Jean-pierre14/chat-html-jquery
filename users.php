@@ -6,7 +6,7 @@
             <div class="col-md-4 col-sm-12 mt-2">
                 <div class="card">
                     <div class="card-header p-2">
-                        <a href="profil?profil=<?= $_SESSION['unique_id'];?>"
+                        <a href="profil?profil=<?= $row['unique_id'];?>"
                             class="d-flex justify-content-between align-item-center">
                             <span>
                                 <img src="./images/<?= $row['img'];?>" alt="<?= $row['username'];?>" class="img-avatar">
