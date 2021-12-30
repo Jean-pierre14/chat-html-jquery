@@ -1,0 +1,9 @@
+CREATE TABLE `crudajax`.`chat`
+(
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `massage` TEXT NOT NULL , `from` VARCHAR
+(255) NOT NULL , 
+    `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    PRIMARY KEY
+(`id`
+)) ENGINE = InnoDB;
