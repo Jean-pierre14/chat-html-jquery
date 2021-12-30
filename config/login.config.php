@@ -14,7 +14,7 @@
             $_SESSION['unique_id'] = $row['unique_id'];
             print 'success';
         }else{
-            echo "This account doesn't exist";
+            print "This account doesn't exist";
         }
     }else{
         print "Email or password invalid";

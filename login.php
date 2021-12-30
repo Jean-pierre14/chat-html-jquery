@@ -24,8 +24,7 @@
                             <div class="form-group">
                                 <label for="username">Email</label>
                                 <input type="hidden" name="action" value="login" class="form-control">
-                                <input type="email" name="email" placeholder="Email" id="email"
-                                    class="form-control">
+                                <input type="email" name="email" placeholder="Email" id="email" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
@@ -41,7 +40,7 @@
                     </div>
                 </div>
                 <div class="card card-body mt-2 p-2">
-                    <p class="text-center">I have an<a href="index.html" class="btn btn-link">account</a></p>
+                    <p class="text-center">I have an<a href="index" class="btn btn-link">account</a></p>
                 </div>
             </div>
         </div>
